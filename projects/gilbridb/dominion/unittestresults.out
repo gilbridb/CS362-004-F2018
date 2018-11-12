@@ -1,0 +1,276 @@
+Result for running Shuffle() tests:
+unittest1.c:
+Shuffle(): PASS when test number of players.
+Shuffle(): PASS when testing p1 cards are shuffled and deck content is the same after shuffle.
+Shuffle(): PASS when testing p2 and p3 were not altered.
+Shuffle(): PASS when testing shuffle of deck 0, not allowed.
+Shuffle(): PASS when testing p1 deck is same after 1 card shuffle.
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+Tests for: 3 players, 1 curses, 0 estates, 3 duchys
+0 provinces, 0 great halls, 0 gardens
+Expected Score: 8
+scoreFor(): PASS when test number of players.
+scoreFor(): FAIL when test score of deck.
+scoreFor(): PASS when test hand Count didn't change for all players.
+scoreFor(): PASS when test discard Count didn't change for all players.
+scoreFor(): PASS when testing decks were not altered for all players.
+scoreFor(): FAIL when test score of discard.
+scoreFor(): PASS when test score of hand.
+Tests for: 4 players, 0 curses, 0 estates, 0 duchys
+0 provinces, 0 great halls, 10 gardens
+Expected Score: 10
+scoreFor(): PASS when test number of players.
+scoreFor(): FAIL when test score of deck.
+scoreFor(): PASS when test hand Count didn't change for all players.
+scoreFor(): PASS when test discard Count didn't change for all players.
+scoreFor(): PASS when testing decks were not altered for all players.
+scoreFor(): FAIL when test score of discard.
+scoreFor(): FAIL when test score of hand.
+Tests for: 2 players, 1 curses, 1 estates, 1 duchys
+1 provinces, 1 great halls, 0 gardens
+Expected Score: 10
+scoreFor(): PASS when test number of players.
+scoreFor(): FAIL when test score of deck.
+scoreFor(): PASS when test hand Count didn't change for all players.
+scoreFor(): PASS when test discard Count didn't change for all players.
+scoreFor(): PASS when testing decks were not altered for all players.
+scoreFor(): FAIL when test score of discard.
+scoreFor(): PASS when test score of hand.
+Tests for: 3 players, 0 curses, 0 estates, 0 duchys
+0 provinces, 0 great halls, 0 gardens
+Expected Score: 0
+scoreFor(): PASS when test number of players.
+scoreFor(): PASS when test score of deck.
+scoreFor(): PASS when test hand Count didn't change for all players.
+scoreFor(): PASS when test discard Count didn't change for all players.
+scoreFor(): FAIL when testing deck Count changed for a player.
+scoreFor(): PASS when test score of discard.
+scoreFor(): PASS when test score of hand.
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+Testing Values:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+testkingdomCards(): PASS when test values of kingdom Cards.
+Testing Values:
+5, 5, 5, 5, 5, 5, 5, 5, 5, 5
+testkingdomCards(): PASS when test values of kingdom Cards.
+Testing Values:
+-10, 2, -22, 0, -4, 2, 16, -7, 12, 0
+testkingdomCards(): PASS when test values of kingdom Cards.
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+Tests for: 3 players, 10 card being searched. Card totals:
+3/7 in deck, 3/8 in hand, 3/9 in discard
+Expected Result: 9
+FullDeckCount(): PASS when test number of players.
+FullDeckCount(): PASS when test card count.
+FullDeckCount(): PASS when test hand Count didn't change for all players.
+FullDeckCount(): PASS when test discard Count didn't change for all players.
+FullDeckCount(): PASS when testing decks were not altered for all players.
+Tests for: 4 players, 9 card being searched. Card totals:
+0/0 in deck, 0/0 in hand, 0/8 in discard
+Expected Result: 0
+FullDeckCount(): PASS when test number of players.
+FullDeckCount(): PASS when test card count.
+FullDeckCount(): PASS when test hand Count didn't change for all players.
+FullDeckCount(): PASS when test discard Count didn't change for all players.
+FullDeckCount(): FAIL when testing deck order changed for a player.
+Tests for: 2 players, 17 card being searched. Card totals:
+0/15 in deck, 8/8 in hand, 0/15 in discard
+Expected Result: 8
+FullDeckCount(): PASS when test number of players.
+FullDeckCount(): PASS when test card count.
+FullDeckCount(): PASS when test hand Count didn't change for all players.
+FullDeckCount(): PASS when test discard Count didn't change for all players.
+FullDeckCount(): PASS when testing decks were not altered for all players.
+Tests for: 2 players, 10 card being searched. Card totals:
+6/20 in deck, 0/0 in hand, 0/0 in discard
+Expected Result: 6
+FullDeckCount(): PASS when test number of players.
+FullDeckCount(): PASS when test card count.
+FullDeckCount(): PASS when test hand Count didn't change for all players.
+FullDeckCount(): PASS when test discard Count didn't change for all players.
+FullDeckCount(): FAIL when testing deck Count changed for a player.
+Tests for: 2 players, 10 card being searched. Card totals:
+0/0 in deck, 0/0 in hand, 8/10 in discard
+Expected Result: 8
+FullDeckCount(): PASS when test number of players.
+FullDeckCount(): PASS when test card count.
+FullDeckCount(): PASS when test hand Count didn't change for all players.
+FullDeckCount(): PASS when test discard Count didn't change for all players.
+FullDeckCount(): FAIL when testing deck Count changed for a player.
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+Tests for: 3 players, 5 hand size, 0 smithy card position
+Smithy(): PASS when test number of players.
+Smithy(): PASS when test add 3 cards.
+Smithy(): PASS when test Smithy card was discarded.
+Smithy(): PASS when testing deck was altered for p1.
+Smithy(): PASS when test hand Count didn't change for all other players.
+Smithy(): PASS when test discard Count didn't change for all other players.
+Smithy(): PASS when testing decks were not altered for all other players.
+Tests for: 4 players, 10 hand size, 2 smithy card position
+Smithy(): PASS when test number of players.
+Smithy(): PASS when test add 3 cards.
+Smithy(): FAIL when test no cards were discarded.
+Smithy(): PASS when testing deck was altered for p1.
+Smithy(): FAIL when test hand Count changed for a different player.
+Smithy(): PASS when test discard Count didn't change for all other players.
+Smithy(): PASS when testing decks were not altered for all other players.
+Tests for: 2 players, 8 hand size, 7 smithy card position
+Smithy(): PASS when test number of players.
+Smithy(): PASS when test add 3 cards.
+Smithy(): FAIL when test no cards were discarded.
+Smithy(): PASS when testing deck was altered for p1.
+Smithy(): PASS when test hand Count didn't change for all other players.
+Smithy(): PASS when test discard Count didn't change for all other players.
+Smithy(): PASS when testing decks were not altered for all other players.
+Tests for: 2 players, 1 hand size, 0 smithy card position
+Smithy(): PASS when test number of players.
+Smithy(): PASS when test add 3 cards.
+Smithy(): PASS when test Smithy card was discarded.
+Smithy(): PASS when testing deck was altered for p1.
+Smithy(): PASS when test hand Count didn't change for all other players.
+Smithy(): PASS when test discard Count didn't change for all other players.
+Smithy(): FAIL when testing deck Count changed for a different player
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+Tests for: 3 players, 5 hand size, 0 embargo card position, 1 choice1, expected return: 0
+Embargo(): FAIL when test return value.
+Embargo(): PASS when test number of players.
+Embargo(): PASS when test coins + 2.
+Embargo(): FAIL when test embargo token was not added to pile choice1.
+Embargo(): FAIL when test Embargo card was not discarded.
+Embargo(): PASS when test hand Count didn't change for all other players.
+Embargo(): PASS when test discard Count didn't change for all players.
+Embargo(): PASS when testing decks were not altered for all other players.
+Tests for: 4 players, 8 hand size, 6 embargo card position, 7 choice1, expected return: 0
+Embargo(): FAIL when test return value.
+Embargo(): PASS when test number of players.
+Embargo(): PASS when test coins + 2.
+Embargo(): FAIL when test embargo token was not added to pile choice1.
+Embargo(): FAIL when test Embargo card was not discarded.
+Embargo(): PASS when test hand Count didn't change for all other players.
+Embargo(): PASS when test discard Count didn't change for all players.
+Embargo(): PASS when testing decks were not altered for all other players.
+Tests for: 2 players, 9 hand size, 8 embargo card position, 3 choice1, expected return: -1
+Embargo(): PASS when test return value.
+Embargo(): PASS when test number of players.
+Embargo(): PASS when test coins + 2.
+Embargo(): FAIL when test embargo token was not added to pile choice1.
+Embargo(): FAIL when test Embargo card was not discarded.
+Embargo(): PASS when test hand Count didn't change for all other players.
+Embargo(): PASS when test discard Count didn't change for all players.
+Embargo(): PASS when testing decks were not altered for all other players.
+Tests for: 4 players, 4 hand size, 1 embargo card position, 11 choice1, expected return: 0
+Embargo(): FAIL when test return value.
+Embargo(): PASS when test number of players.
+Embargo(): PASS when test coins + 2.
+Embargo(): FAIL when test embargo token was not added to pile choice1.
+Embargo(): FAIL when test Embargo card was not discarded.
+Embargo(): PASS when test hand Count didn't change for all other players.
+Embargo(): PASS when test discard Count didn't change for all players.
+Embargo(): FAIL when testing deck Count changed for a different player
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+Tests for: 3 players, 5 hand size, 2 number of treasure map cards, 0 1 Treasure map card positions, 1 expected return
+Treasure_Map(): PASS when test number of players.
+Treasure_Map(): PASS when test return value.
+Treasure_Map(): FAIL when test treasure map cards still present in hand.
+Treasure_Map(): PASS when test hand Count didn't change for all other players.
+Treasure_Map(): PASS when test discard Count didn't change for all other players.
+Treasure_Map(): PASS when testing decks were not altered for all other players.
+Tests for: 4 players, 8 hand size, 2 number of treasure map cards, 7 0 Treasure map card positions, 1 expected return
+Treasure_Map(): PASS when test number of players.
+Treasure_Map(): PASS when test return value.
+Treasure_Map(): PASS when test treasure maps discarded.
+Treasure_Map(): PASS when test hand Count didn't change for all other players.
+Treasure_Map(): PASS when test discard Count didn't change for all other players.
+Treasure_Map(): PASS when testing decks were not altered for all other players.
+Tests for: 4 players, 2 hand size, 2 number of treasure map cards, 1 0 Treasure map card positions, 1 expected return
+Treasure_Map(): PASS when test number of players.
+Treasure_Map(): PASS when test return value.
+Treasure_Map(): PASS when test hand Count didn't change for all other players.
+Treasure_Map(): PASS when test discard Count didn't change for all other players.
+Treasure_Map(): FAIL when testing deck Count changed for a different player
+Tests for: 2 players, 10 hand size, 1 number of treasure map cards, 5 7 Treasure map card positions, -1 expected return
+Treasure_Map(): PASS when test number of players.
+Treasure_Map(): FAIL when test return value.
+Treasure_Map(): PASS when test treasure maps discarded.
+Treasure_Map(): PASS when test hand Count didn't change for all other players.
+Treasure_Map(): PASS when test discard Count didn't change for all other players.
+Treasure_Map(): PASS when testing decks were not altered for all other players.
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+Tests for: 3 players, 5 hand size, 0 adventurer card position, 15 deck size, 10 discard size
+TREASURE 1: 4 type(4 = copper, 5 = silver, 6 = gold), 0 location(0 = deck, 1 = discard), 0 position in the pile (0 is top)
+TREASURE 2: 4 type, 1 location, 9 position
+Adventurer(): PASS when test number of players.
+Adventurer(): PASS when test both treasures in hand.
+Adventurer(): FAIL when test incorrect number of cards in hand.
+Adventurer(): FAIL when test Adventurer card was not discarded.
+Adventurer(): PASS when test Treasures no longer in discard or deck.
+Adventurer(): FAIL when test discard + deck count is off.
+Adventurer(): PASS when test hand Count didn't change for all other players.
+Adventurer(): PASS when test discard Count didn't change for all other players.
+Adventurer(): PASS when testing decks were not altered for all other players.
+Tests for: 2 players, 5 hand size, 2 adventurer card position, 2 deck size, 10 discard size
+TREASURE 1: 5 type(4 = copper, 5 = silver, 6 = gold), 0 location(0 = deck, 1 = discard), 0 position in the pile (0 is top)
+TREASURE 2: 5 type, 0 location, 1 position
+Adventurer(): PASS when test number of players.
+Adventurer(): PASS when test both treasures in hand.
+Adventurer(): FAIL when test incorrect number of cards in hand.
+Adventurer(): FAIL when test Adventurer card was not discarded.
+Adventurer(): PASS when test Treasures no longer in discard or deck.
+Adventurer(): FAIL when test discard + deck count is off.
+Adventurer(): PASS when test hand Count didn't change for all other players.
+Adventurer(): PASS when test discard Count didn't change for all other players.
+Adventurer(): PASS when testing decks were not altered for all other players.
+Tests for: 4 players, 5 hand size, 3 adventurer card position, 15 deck size, 2 discard size
+TREASURE 1: 4 type(4 = copper, 5 = silver, 6 = gold), 1 location(0 = deck, 1 = discard), 1 position in the pile (0 is top)
+TREASURE 2: 5 type, 1 location, 0 position
+Adventurer(): PASS when test number of players.
+Adventurer(): PASS when test both treasures in hand.
+Adventurer(): FAIL when test incorrect number of cards in hand.
+Adventurer(): FAIL when test Adventurer card was not discarded.
+Adventurer(): PASS when test Treasures no longer in discard or deck.
+Adventurer(): FAIL when test discard + deck count is off.
+Adventurer(): PASS when test hand Count didn't change for all other players.
+Adventurer(): PASS when test discard Count didn't change for all other players.
+Adventurer(): PASS when testing decks were not altered for all other players.
+Tests for: 3 players, 2 hand size, 0 adventurer card position, 6 deck size, 6 discard size
+TREASURE 1: 6 type(4 = copper, 5 = silver, 6 = gold), 0 location(0 = deck, 1 = discard), 3 position in the pile (0 is top)
+TREASURE 2: 6 type, 1 location, 3 position
+Adventurer(): PASS when test number of players.
+Adventurer(): FAIL when test incorrect number of cards in hand.
+Adventurer(): FAIL when test Treasures still in discard.
+Adventurer(): FAIL when test discard + deck count is off.
+Adventurer(): PASS when test hand Count didn't change for all other players.
+Adventurer(): PASS when test discard Count didn't change for all other players.
+Adventurer(): FAIL when testing deck Count changed for a different player
+File 'dominion.c'
+Lines executed:41.58% of 558
+Creating 'dominion.c.gcov'
+
