@@ -130,22 +130,31 @@ void smithyRandomTest()
 
 	//Choose a player
 	//This will be the player playing the card
-	int chosen_player = rand() % (post->numPlayers + 1);
+	int chosen_player = rand() % (post->numPlayers);
 	post->whoseTurn = chosen_player;
 
 	//randomize all players hands, decks, and discards
 	int cards[17] = {curse, estate, duchy, province, copper, silver, gold, k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]}; //list of possible card to fill up deck, hand, or discard
+
+
 	for(i = 0; i < post->numPlayers; i++)
 	{
 		//randomize hand
-		num = (rand() % (MAX_HAND + 1));
-		post->handCount[i] = num;
+		//num = (rand() % (MAX_HAND + 1));
+		//post->handCount[i] = num;
+		post->handCount[i] = (rand() % (MAX_HAND + 1));
+		
+		if(post->handCount[i] < 0) 
+		{
+			post->handCount[i] += 10;
+			printf("NEW post->handCount: %i", post->handCount[i]);
+		}//Somehow getting negative values, this is a fix
 		for(j = 0; j < post->handCount[i]; j++)
 		{
 			num = (rand() % (17));// choices 0 - 16 for cards[17]
 			post->hand[i][j] = cards[num];
 		}
-		
+		if(post->handCount[i] < 0) {printf("RED HOT! %i!\n", times_run);}	
 		
 		//randomize deck
 		num = (rand() % (MAX_DECK + 1));
@@ -168,6 +177,7 @@ void smithyRandomTest()
 
 
 	}
+	if(post->handCount[chosen_player] < 0) {printf("It happened right away %i!\n", times_run);}	
 
 	//Randomized playedCards
 	post->playedCardCount = rand() % (MAX_DECK + 1);
@@ -199,6 +209,7 @@ void smithyRandomTest()
 		post->hand[chosen_player][card_pos] = card_in_test;
 	}
 
+	if(post->handCount[chosen_player] < 0) {printf("It happened at handslot %i!\n", times_run);}	
 	//Randomize OutpostTurn between 0-1
 	post->outpostTurn = rand() % 2;
 
@@ -243,6 +254,8 @@ void smithyRandomTest()
 		}
 	}
 
+	if(post->handCount[chosen_player] < 0) {printf("It happened pretty late %i!\n", times_run);}	
+
 	//Randomly Apply Embargo Tokens
 	//Not completely random as it favors earlier stacks, but can technically create
 	//...all possible combos
@@ -277,6 +290,15 @@ void smithyRandomTest()
 		printf("Hold it kelly!, whose:%i, players:%i", post->whoseTurn, post->numPlayers);
 	}
 	*/	
+
+	//TESTING HERE
+	if((post->handCount[chosen_player] < 0)||(post->discardCount[chosen_player] < 0)||
+		(post->deckCount[chosen_player] < 0)||(post->playedCardCount < 0))
+	{
+		printf("\n\n\nWHAT A CONUNDRUM ON %i!\nHAND: %i\nDISCARD: %i\nDECK: %i\nPLAYED: %i\n\n\n", times_run, post->handCount[chosen_player], post->discardCount[chosen_player], post->deckCount[chosen_player], post->playedCardCount);
+	}
+
+
 
 	
 	//Copy current game into pre before enacting the function on the current

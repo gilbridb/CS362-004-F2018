@@ -130,7 +130,7 @@ void adventurerRandomTest()
 
 	//Choose a player
 	//This will be the player playing the card
-	int chosen_player = rand() % (post->numPlayers + 1);
+	int chosen_player = rand() % (post->numPlayers);
 	post->whoseTurn = chosen_player;
 
 	//randomize all players hands, decks, and discards
