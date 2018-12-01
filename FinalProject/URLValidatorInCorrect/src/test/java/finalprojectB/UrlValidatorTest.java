@@ -39,25 +39,26 @@ public class UrlValidatorTest extends TestCase {
 		//Test URLs		
 		assertTrue(urlVal.isValid("http://www.google.com"));	//<-This worked!
 		//Since "http://www.google.com" worked:
-		//assertTrue(urlVal.isValid("http://www.google.com:0")); //add a valid port <- FAILED!
+		assertTrue(urlVal.isValid("http://www.google.com:0")); //add a valid port <- FAILED!
 		assertFalse(urlVal.isValid("http://www.google.com:-1")); //add an invalid port
-		//assertTrue(urlVal.isValid("http://www.google.com/test/")); //add a valid path <- FAILED!
+		assertTrue(urlVal.isValid("http://www.google.com/test/")); //add a valid path <- FAILED!
 		assertFalse(urlVal.isValid("http://www.google.com//../")); //add an invalid path
-		//assertTrue(urlVal.isValid("http://www.google.com/test/#a-fragment")); //add a valid fragment <- FAILED!
+		assertTrue(urlVal.isValid("http://www.google.com/test/#a-fragment")); //add a valid fragment <- FAILED!
 		assertFalse(urlVal.isValid("http://www.google.com:0/test/#<>`\"NOT FRAGMENT'")); //add an invalid fragment
+
 		//Basic scheme and auth tests
 		assertTrue(urlVal.isValid("ftp://www.google.com"));
 		assertFalse(urlVal.isValid("30go--go://www.google.com"));
 		assertTrue(urlVal.isValid("http://0.0.0.0"));
 		assertFalse(urlVal.isValid("http://..1.2%.com"));
-		//Other Tests
-		
-		//assertTrue(urlVal.isValid("file://test/")); //Special case file: allows for empty auth <- FAILED! Regular Expressions Are Missing
+
+		//Other Tests		
+		assertTrue(urlVal.isValid("file://test/")); //Special case file: allows for empty auth <- FAILED! Regular Expressions Are Missing
 		assertTrue(urlVal.isValid("file://www.google.com:0")); //Test ability to catch trailing ":"
-		//assertTrue(urlVal.isValid("https://www.google.com")); // <- FAILED! Regular Expressions Are Missing
+		assertTrue(urlVal.isValid("https://www.google.com")); // <- FAILED! Regular Expressions Are Missing
 		assertTrue(urlVal.isValid("ftp://www.google.com/search?q=cats&ie=UTF-8")); // <- FAILED!
-		//assertTrue(urlVal.isValid("CAPS://www.google.com/")); // test capitalized scheme<- FAILED!
-		//assertTrue(urlVal.isValid("https://www.instagram.com/accounts/login/?next=%2Fbeavervip%2F&source=follow")); // <- FAILED!
+		assertTrue(urlVal.isValid("CAPS://www.google.com/")); // test capitalized scheme<- FAILED!
+		assertTrue(urlVal.isValid("https://www.instagram.com/accounts/login/?next=%2Fbeavervip%2F&source=follow")); // <- FAILED!
 		assertFalse(urlVal.isValid(""));
 		assertFalse(urlVal.isValid("http://  www.  google.  com"));
 		}
@@ -124,7 +125,6 @@ public class UrlValidatorTest extends TestCase {
    
    public void testIsValid()
    {
-	   //TODO assert "file:/" tests
 	   
 	   //StringBuilder testString = new StringBuilder();
 	   boolean[] tester = new boolean[6];
